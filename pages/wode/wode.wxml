@@ -1,0 +1,46 @@
+<view wx:if="{{!hasLogin}}"> <!--这是已登录状态，接口未完成-->
+    <view class="head">
+      <view id="h1">
+        <image src="{{touxiang}}" bindtap="headimage" />
+      </view>
+      <view id="h2">{{yonghuming}}</view>
+      <view id="h3">
+        <navigator url="../grzx/grzx"><text decode="true">个人中心&nbsp;&nbsp;></text></navigator>
+      </view>
+    </view>
+    <view class="body">
+      <view class="b1">我的服务</view>
+      <view class="b2">
+        <block wx:for="{{servicelist}}">
+          <navigator url="{{item.url}}">
+          <view class="b3">
+          <image src="{{item.icon}}"/>
+          <text>{{item.text}}</text>
+          </view>
+        </navigator>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view wx:else><!--这是未登录状态，点击任意功能前往登录界面-->
+      <view class="head">
+      <view id="h1">
+        <image src="{{touxiang}}" bindtap="headimage1" mode="widthFix"/>
+      </view>
+      <view id="h2">{{yonghuming}}</view>
+      <view id="h3">
+        <view id="h3_2" bindtap="headimage1"><text decode="true">个人中心&nbsp;&nbsp;></text></view>
+      </view>
+    </view>
+    <view class="body">
+      <view class="b1">我的服务</view>
+      <view class="b2">
+        <block wx:for="{{servicelist}}">
+          <view class="b3" bindtap="headimage1">
+          <image src="{{item.icon}}"/>
+          <text>{{item.text}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>

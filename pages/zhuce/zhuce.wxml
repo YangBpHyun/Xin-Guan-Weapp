@@ -1,0 +1,40 @@
+
+<view class="total" id="total">
+    <form bindsubmit="create_zhuce">
+    <view class="item" id="r1">
+        <text>身份选择</text>
+        <radio-group name="shenfen" class="radio-group" bindchange="radioChange">
+            <radio color="#EC808D"  value="lifashi" checked>理发师</radio>
+            <radio color="#EC808D"  value="yonghu" >用户</radio>
+        </radio-group>
+    </view>
+    <view id="t1" class="item input_view {{focusLianXiFangShi?'focus':'blur'}}">
+        <text>手机号</text>
+        <input type="number" name="lianxifangshi" id="lianxifangshi"focus="focus" bindfocus="focusLianXiFangShi" bindblur="blurLianXiFangShi" maxlength="11" placeholder="输入您的手机号码" value="{{lianxifangshi}}"></input>
+    </view>
+    <view id="t2" class="item input_view {{focusXingMing?'focus':'blur'}}">
+        <text>姓名</text>
+        <input type="text" name="xingming" id="xingming" focus="focus" bindfocus="focusXingMing" bindblur="blurXingMing" placeholder="输入您的姓名" value="{{xingming}}"></input>
+    </view>
+    <view id="t3" class="item input_view {{focusYongHuMing?'focus':'blur'}}">
+        <text>用户名</text>
+        <input type="text" name="yonghuming" id="yonghuming" focus="focus" bindfocus="focusYongHuMing" bindblur="blurYongHuMing" placeholder="输入您的用户名" value="{{yonghuming}}"></input>
+        </view>
+    <view class="item"id="r2">
+        <text>性别</text>
+        <radio-group name="xingbie" class="radio-group" bindchange="handleChange">
+            <radio color="#EC808D" value="1">男</radio>
+            <radio color="#EC808D" value="0" checked>女</radio>
+        </radio-group>
+    </view>
+    <view id="t4" class="item input_view {{focusMiMa?'focus':'blur'}}">
+        <text>密码</text>
+        <input type="password" name="mima" id="mima" focus="focus" bindfocus="focusMiMa" bindblur="blurMiMa" placeholder="输入您的密码" value="{{mima}}"></input>
+    </view>
+    <view id="t5" class="item input_view {{focusReMiMa?'focus':'blur'}}">
+        <text>确认密码</text>
+        <input type="password" name="remima" id="remima" focus="focus" bindfocus="focusReMiMa" bindblur="blurReMiMa" placeholder="确认您的密码" value="{{mima2}}"></input>
+    </view>
+        <button id="bt_zhuce" hover-class="hover" form-type="submit" ><text>注册</text></button>
+    </form> 
+ </view>

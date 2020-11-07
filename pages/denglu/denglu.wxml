@@ -1,0 +1,21 @@
+<view id="total">
+    <image src="../../image/jianyuetubiao.png"/>
+    <view class="kong"></view>
+    <form class="input" bindsubmit="denglu">
+        <view class="lianxifangshi input_view {{focusLianXiFangShi?'focus':'blur'}}" >
+            <input type="number"  name="lianxifangshi" placeholder="请输入您的手机号码" bindfocus="focusLianXiFangShi" bindblur="blurLianXiFangShi" maxlength="11" value="{{lianxifangshi}}"></input>
+        </view>
+        <view class="mima input_view {{focusMiMa?'focus':'blur'}}" >
+            <input type="password" name="mima" placeholder="请输入密码" bindfocus="focusMiMa" bindblur="blurMiMa" value="{{mima}}"></input>
+        </view>
+        <!-- <button bindtap="goto_index" id="bt_login" form-type="submit"><text>登录</text></button> -->
+        <button  id="bt_login" form-type="submit"><text>登录</text></button>
+    </form>
+    <button  id="bt_login" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"><text>微信一键登录</text></button>
+    <view class="bts">
+        <button class="item" bindtap="goto_zhuce" id="bt_zhuce"><text>点击注册</text></button>
+        <button class="item" bindtap="goto_wangjimimae" id="bt_wangjimima"><text>忘记密码</text></button>    
+    </view>
+   
+</view>
+

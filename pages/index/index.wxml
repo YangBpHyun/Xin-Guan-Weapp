@@ -1,0 +1,16 @@
+<van-search
+ sticky   
+ value="{{ value }}" 
+ placeholder="请输入关键词"
+ show-action
+ shape="round"
+ background="#ec808d"
+ bind:search="onSearch"
+ bind:cancel="onCancel"
+/>
+<van-tabs sticky swipeable active="{{ active }}" color="#ec808d" bind:click="onClick">
+  <van-tab title="全部订单">全部订单</van-tab>
+  <van-tab title="已完成订单">已完成订单</van-tab>
+  <van-tab title="预约订单">预约订单</van-tab>
+  <van-tab title="已取消">已取消</van-tab>
+</van-tabs>

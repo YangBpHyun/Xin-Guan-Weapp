@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-popup": "../../dist/popup/index",
+    "van-field": "../../dist/field/index"
+  },
+  "navigationBarTitleText": "注册"
+
+}
